@@ -1,0 +1,18 @@
+{
+  "name": "@ucd-lib/cork-icon-set-generator",
+  "version": "0.0.1",
+  "description": "Create iron-icon set from folder of svg icons",
+  "main": "index.js",
+  "bin" : {
+    "cork-icon-set-generator" : "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jrmerz@ucdavis.edu",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "xml2js": "^0.4.19"
+  }
+}
