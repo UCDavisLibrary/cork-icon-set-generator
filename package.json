@@ -1,6 +1,6 @@
 {
   "name": "@ucd-lib/cork-icon-set-generator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Create iron-icon set from folder of svg icons",
   "main": "index.js",
   "bin": {
