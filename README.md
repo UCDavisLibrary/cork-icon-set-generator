@@ -15,3 +15,5 @@ by ```iron-icon```.
 
  - *icon-set-name*: name of the icon set, the file will be named this as well
  - *directory*: directory to crawl
+ - *-u*: generate a `ucdlib-iconset` instear of `iron-iconset-svg`
+ - *-v*: copy the viewbox from source svg icons if it exists.
