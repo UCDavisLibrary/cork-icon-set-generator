@@ -17,6 +17,6 @@ if( args._.length < 2 ) {
 }
 
 (async function() {
-  let iconSet = await crawler.run(process.argv[2], process.argv[3], iconSetType, useViewBox);
+  let iconSet = await crawler.run(args._[0], args._[1], iconSetType, useViewBox);
   await iconSet.write();
 })();
