@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const crawler = require('../lib/crawler');
+const fontAwesomeExtractor = require("../lib/font-awesome");
 const arg = require('arg');
 const args = arg({
   '--ucdlib': Boolean,
@@ -17,6 +18,11 @@ if( args._.length < 2 ) {
 }
 
 (async function() {
-  let iconSet = await crawler.run(args._[0], args._[1], iconSetType, useViewBox);
-  await iconSet.write();
+  let customIconSet = await crawler.run(args._[0], args._[1], iconSetType, useViewBox);
+  let fontAwesomeIconSet = await fontAwesomeExtractor.run(args._[0], args._[1], iconSetType, useViewBox);
+  if ( fontAwesomeIconSet ) {
+    customIconSet.merge(fontAwesomeIconSet);
+    customIconSet.hasFontAwesomeIcons = true;
+  }
+  await customIconSet.write();
 })();
