@@ -4,6 +4,7 @@ const crawler = require('../lib/crawler');
 const fontAwesomeExtractor = require("../lib/font-awesome");
 const arg = require('arg');
 const args = arg({
+  '--label': String,
   '--ucdlib': Boolean,
   '-u': '--ucdlib',
   '--viewbox': Boolean,
@@ -11,6 +12,7 @@ const args = arg({
 });
 const iconSetType = args['--ucdlib'] ? 'ucdlib' : 'polymer';
 const useViewBox = args['--viewbox'];
+const iconSetLabel = args['--label'];
 
 if( args._.length < 2 ) {
   console.log('cork-icon-set-generator <icon-set-name> <directory>');
@@ -23,6 +25,9 @@ if( args._.length < 2 ) {
   if ( fontAwesomeIconSet ) {
     customIconSet.merge(fontAwesomeIconSet);
     customIconSet.hasFontAwesomeIcons = true;
+  }
+  if ( iconSetLabel ) {
+    customIconSet.iconSetLabel = iconSetLabel;
   }
   await customIconSet.write();
 })();

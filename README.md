@@ -18,6 +18,7 @@ contents, and merge them into either a single
  - *directory*: directory to crawl
  - *-u*: generate a `ucdlib-iconset` instead of `iron-iconset-svg`
  - *-v*: copy the viewbox from source svg icons if it exists.
+ - *--label*: adds a custom friendly label to `ucdlib-iconset`
 
 ## Font Awesome
 Font Awesome (FA) icons can be incorporated into a cork-icon-set by doing the following before running the above command:
