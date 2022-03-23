@@ -18,6 +18,7 @@ contents, and merge them into either a single
  - *directory*: directory to crawl
  - *-u*: generate a `ucdlib-iconset` instead of `iron-iconset-svg`
  - *-v*: copy the viewbox from source svg icons if it exists.
+ - *-h*: generate an html file with the iconset instead of a js file
  - *--label*: adds a custom friendly label to `ucdlib-iconset`
 
 ## Font Awesome
