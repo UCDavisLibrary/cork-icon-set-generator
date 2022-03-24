@@ -34,4 +34,12 @@ icons:
   - twitter:
       - brands
 ```
+If you want to use a whole FA set, use `sets`:
+```yaml
+sets:
+  - solid
+icons:
+  - twitter:
+    - brands
+```
 This only works for the [free icons](https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free).
